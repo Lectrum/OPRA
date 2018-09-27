@@ -57,6 +57,7 @@ const sync = async () => {
                 },
             },
         });
+
         console.log('→ 3', result);
     } catch (error) {
         console.log('→ error', error);
