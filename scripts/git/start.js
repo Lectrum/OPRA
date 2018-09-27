@@ -48,7 +48,7 @@ const sync = async () => {
         const references = await repository.getReferenceNames(3);
         console.log('→ 2', references);
 
-        const result = await origin.push([ 'refs/remotes/origin/lectrum-dev' ], {
+        const result = await origin.push([ 'refs/remotes/origin/lectrum-dev:refs/remotes/origin/lectrum-dev' ], {
             prune:     1,
             callbacks: {
                 credentials(url, userName) {
