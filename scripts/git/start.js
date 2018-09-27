@@ -43,8 +43,8 @@ const sync = async () => {
         console.log('→ 1');
         const origin = await repository.getRemote('origin');
         // console.log('→ oro', origin.bra());
-        // const references = await repository.getReferenceNames(3);
-        console.log('→ 2');
+        const references = await repository.getReferenceNames(3);
+        console.log('→ 2', references);
 
         const result = await origin.push([ 'refs/remotes/origin/lectrum-dev' ], {
             prune:     1,
