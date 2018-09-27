@@ -24,13 +24,13 @@ const appState = {
             id:      '741',
             comment: 'Good night!',
             author:  { id: '651', name: 'Jack', gender: 'male' },
-        }
+        },
     ],
     users: [
         { id: '321', name: 'Jane', gender: 'female' },
         { id: '654', name: 'Mike', gender: 'male' },
         { id: '323', name: 'Mery', gender: 'female' },
-        { id: '651', name: 'Jack', gender: 'male' }
+        { id: '651', name: 'Jack', gender: 'male' },
     ],
     counter: 2,
 };
