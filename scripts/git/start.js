@@ -42,6 +42,7 @@ const sync = async () => {
         );
         console.log('→ 1');
         const origin = await repository.getRemote('origin');
+        console.log('→ oro', origin.name());
         // const references = await repository.getReferenceNames(3);
         console.log('→ 2');
 
