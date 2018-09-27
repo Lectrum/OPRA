@@ -46,17 +46,7 @@ const sync = async () => {
         const references = await repository.getReferenceNames(3);
         console.log('→ 2', references);
 
-        const result = await origin.push([ '/refs/remotes/origin/lectrum-dev' ], {
-            prune:     1,
-            callbacks: {
-                credentials(url, userName) {
-                    return git.Cred.sshKeyFromAgent(userName);
-                },
-                certificateCheck() {
-                    return 1;
-                },
-            },
-        });
+        const result = await origin.push([ 'refs/remotes/origin/lectrum-dev' ], );
         console.log('→ 3', result);
     } catch (error) {
         console.log('→ error', error);
