@@ -40,6 +40,27 @@ const sync = async () => {
             oid,
             [ parent ],
         );
+        console.log('→ 1');
+        const origin = await repository.getRemote('origin');
+        // const references = await repository.getReferenceNames(3);
+        console.log('→ 2');
+
+        await origin.push('refs/remotes/origin/lectrum-dev', {
+            prune:     1,
+            callbacks: {
+                credentials(url, userName) {
+                    console.log('→ cred');
+
+                    return git.Cred.sshKeyFromAgent(userName);
+                },
+                certificateCheck() {
+                    console.log('→ passthrough');
+
+                    return 1;
+                },
+            },
+        });
+        console.log('→ 3');
     } catch (error) {
         console.log('→ error', error);
     }
