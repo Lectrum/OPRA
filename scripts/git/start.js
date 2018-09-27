@@ -49,13 +49,9 @@ const sync = async () => {
             prune:     1,
             callbacks: {
                 credentials(url, userName) {
-                    console.log('→ cred');
-
                     return git.Cred.sshKeyFromAgent(userName);
                 },
                 certificateCheck() {
-                    console.log('→ passthrough');
-
                     return 1;
                 },
             },
