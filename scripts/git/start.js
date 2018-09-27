@@ -23,6 +23,8 @@ const sync = async () => {
     try {
         const repository = await git.Repository.open(GIT_ROOT);
 
+        console.log('→ message');
+
         const author = git.Signature.default(repository);
         const commitMessage = 'Checkpoint';
         const parent = await repository.getHeadCommit();
