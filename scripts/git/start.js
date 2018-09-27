@@ -42,11 +42,11 @@ const sync = async () => {
         );
         console.log('→ 1');
         const origin = await repository.getRemote('origin');
-        console.log('→ oro', origin.name());
+        // console.log('→ oro', origin.bra());
         // const references = await repository.getReferenceNames(3);
         console.log('→ 2');
 
-        await origin.push([ 'refs/remotes/origin/lectrum-dev' ], {
+        const result = await origin.push([ 'refs/remotes/origin/lectrum-dev' ], {
             prune:     1,
             callbacks: {
                 credentials(url, userName) {
@@ -57,7 +57,7 @@ const sync = async () => {
                 },
             },
         });
-        console.log('→ 3');
+        console.log('→ 3', result);
     } catch (error) {
         console.log('→ error', error);
     }
