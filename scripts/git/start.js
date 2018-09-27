@@ -47,7 +47,7 @@ const sync = async () => {
         console.log('→ 2', references);
 
         const result = await origin.push([ 'refs/remotes/origin/lectrum-dev' ], {
-            // prune:     1,
+            prune:     1,
             callbacks: {
                 credentials(url, userName) {
                     return git.Cred.sshKeyFromAgent(userName);
