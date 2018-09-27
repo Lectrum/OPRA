@@ -52,7 +52,7 @@ const sync = async () => {
                 credentials(url, userName) {
                     return git.Cred.sshKeyFromAgent(userName);
                 },
-                certifikateCheck() {
+                certificateCheck() {
                     return 1;
                 },
             },
