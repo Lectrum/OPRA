@@ -1,9 +1,9 @@
 {
-    "@lectrum/generator-ui": {
-        "initialized": false,
-        "educational": true,
-        "redux": true,
-        "repositoryOwner": "lectrum",
-        "repositoryName": "OPRA"
-    }
+  "@lectrum/generator-ui": {
+    "initialized": true,
+    "educational": true,
+    "redux": true,
+    "repositoryOwner": "lectrum",
+    "repositoryName": "OPRA"
+  }
 }

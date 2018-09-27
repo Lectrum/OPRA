@@ -39,4 +39,4 @@ const selectPosts = (state) => state.posts;
 
 const posts = selectPosts(appState);
 
-console.log('• selected posts •', posts);
+console.log('• selected posts ←←← •', posts);
